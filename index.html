@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus Slayer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.png">
+    <script type="module" src="js/script.js"></script>
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="left">
+            <div class="card">
+                <figure class="title">
+                    <img src="favicon.png" alt="icon" src="virus-img.png">
+                    <img src="design/resource/virus-img.png" alt="icon" id="virus-img" hidden>
+                    <img src="design/resource/protect.png" alt="icon" id="protect-img" hidden>
+                    <figcaption><h1>Virus Slayer</h1></figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <canvas id="game">
+            
+        </canvas>
+
+        <div class="right">
+            <div class="card">
+                <div class="timer">
+                    <h2>Time: <span id="time-elapsed">0</span>s</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="score">
+                    <h2>Score: <span id="score-percentage">0</span></h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="fail">
+                    <h2>Fail: <span id="fail-gained">0</span></h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="name">
+                    <h2>Name: <span id="player-name">none</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="instruction">
+            <div class="card">
+                <img src="favicon.png" alt="Icon" class="ins-img">
+                <h2>Game instructions</h2>
+                <ol>
+                    <li>Input username and click play Button</li>
+                    <li>Kill virus with pressing "D", "F", "J", and "K" key</li>
+                    <li>Reach highscore!</li>
+                    <li>Game over when fail is 5</li>
+                    <li>Enjoy</li>
+                </ol>
+                <form id="play-form">
+                    <input type="hidden" id="nona">
+                    <input type="text" id="input-name" autofocus required placeholder="Input Your name">
+                    <button type="submit" id="play-button" onclick="document.getElementById('nona').classList.add(document.getElementById('input-name').value); document.getElementById('player-name').innerHTML = document.getElementById('nona').className">Play</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="modal hide" id="end">
+            <div class="card">
+                <h2 class="result">Game Over</h2>
+                <h3>Your score: <span class="score"></span></h3>
+                <h3>Time: <span class="time"></span>s</h3>
+                <button class="highscore">See highscores</button>
+                <button onclick="window.location.reload()">restart</button>
+            </div>
+        </div>
+
+        <div class="modal hide" id="pause">
+            <div class="card">
+                <h2 class="result">Paused</h2>
+                <button class="continue">continues</button>
+                <button onclick="window.location.reload()" class="restart">restart</button>
+            </div>
+        </div>
+
+        <div class="modal hide" id="highscore">
+            <div class="card">
+                <h2 class="result">Highscores</h2>
+                <div class="table"></div>
+                <button onclick="window.location.reload()" class="restart">restart</button>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

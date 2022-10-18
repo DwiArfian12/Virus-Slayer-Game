@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#container {
+    background-color: #111;
+    width: 960px;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+    box-shadow: 1px 1px 40px #333;
+}
+
+#container .left, #container .right {
+    display: flex;
+    align-items: center;
+    flex-basis: 280px;
+    flex-direction: column;
+}
+
+canvas#game {
+    background-color: #1a1a1a;
+    flex-basis: 400px;
+}
+
+.card {
+    width: 200px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+figure.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+figure.title img {
+    flex-basis: 50%;
+    width: 50px;
+    height: auto;
+}
+
+figure.title figcaption {
+    flex-basis: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+
+}
+
+.hide {
+    display: none;
+}
+
+.modal .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(calc(-50% - 20px), -50%);
+    box-shadow: 1px 1px 30px #333;
+}
+
+.ins-img {
+    width: 70px;
+    text-align: center;
+    margin-left: 150px;
+}
+
+#instruction h2, #end, #pause, #highscore, .right .card {
+    text-align: center;
+}
+
+#instruction ol {
+    padding-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#instruction li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input#input-name {
+    border: none;
+    border-radius: 20px;
+    background-color: #111;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 100%;
+    color: white;
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    background-color: deepskyblue;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button#play-button:hover {
+    background-color: skyblue;
+    color: #444;
+}
+
+button.continue, button.highscore {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #222;
+}
+
+button.continue:hover, button.highscore:hover {
+    background-color: #555;
+}
+
+.restart {
+    background-color: red;
+}
+
+.restart:hover {
+    background-color: rgb(255, 69, 69);
+}
+
+.right h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+table {
+    border: none;
+    border-radius: 20px;
+    background-color: #111;
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
